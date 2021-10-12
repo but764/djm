@@ -1,4 +1,4 @@
-% extends 'djshop/base.html' %}
+{% extends 'djshop/base.html' %}
 
 {% block css %}
 {% endblock %}
@@ -13,24 +13,17 @@
 			<div class="clearfix">
 			</div>
 			<div class="tab-content">
-				<div class="block">
-					<a href="#"><img src="/static/djshop/img/product-1.jpg" alt="">
-						<div class="text">
-							<img src="/static/djshop/img/icon-hover.png" alt="img">
-							<h4>Отличный стул</h4>
-							<p>Расположитесь комфортно. </p>
-						</div>
-					</a>
-				</div>
-				<div class="block">
-					<a href="#"><img src="/static/djshop/img/product-2.jpg" alt="">
-						<div class="text">
-							<img src="/static/djshop/img/icon-hover.png" alt="">
-							<h4>Стул повышенного качества</h4>
-							<p>Не оторваться. </p>
-						</div>
-					</a>
-				</div>
+				{% for product in products %}
+					<div class="block">
+						<a href="#"><img src="/media/{{ product.image }}" alt="">
+							<div class="text">
+								<img src="/static/djshop/img/icon-hover.png" alt="img">
+								<h4>{{ product.short_desc }}</h4>
+								<p>{{ product.description }} </p>
+							</div>
+						</a>
+					</div>
+				{% endfor %}
 			</div>
 		</div>
 
