@@ -1,9 +1,23 @@
 from django.shortcuts import render
-
+from productshop.models import Product
 
 def main(request):
-    return render(request, 'djshop/index.html')
+    title = 'Магазин'
+
+    products = Product.objects.all()[:4]
+
+    context = {
+        'title': title,
+        'products': products,
+    }
+    return render(request, 'djshop/index.html', context)
 
 
 def contacts(request):
-    return render(request, 'djshop/contact.html')
+    title = 'Контакты'
+
+    context = {
+        'title': title
+    }
+
+    return render(request, 'djshop/contact.html', context)

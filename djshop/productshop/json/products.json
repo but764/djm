@@ -1,0 +1,30 @@
+[
+
+  {
+      "category": "Стулья",
+      "name": "Удобный стул",
+      "image": "products_images/product-2.jpg",
+      "short_desc": "",
+      "descrition": "",
+      "price": "2500.00",
+      "quantity": 100
+  },
+  {
+      "category": "Офис",
+      "name": "Лампа",
+      "image": "products_images/product-1.jpg",
+      "short_desc": "Ламповый свет",
+      "descrition": "",
+      "price": "1200.00",
+      "quantity": 5
+  },
+  {
+      "category": "Офис",
+      "name": "Диван",
+      "image": "products_images/product-3-sm.jpg",
+      "short_desc": "Уникальный дизайн",
+      "descrition": "",
+      "price": "15000.00",
+      "quantity": 2
+  }
+]
