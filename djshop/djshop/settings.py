@@ -41,6 +41,7 @@ INSTALLED_APPS = [
 
     'productshop',
     'authapp',
+    'basketapp',
 ]
 
 AUTH_USER_MODEL = 'authapp.ShopUser'
@@ -128,6 +129,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'djshop', "static"),
 )
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+
+]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 

@@ -6,15 +6,15 @@ from productshop.models import ProductCategory, Product
 
 JSON_PATH = 'productshop/json'
 
+
 def load_from_json(file_name):
     with open(os.path.join(JSON_PATH, file_name + '.json'), mode='r', encoding='utf8') as infile:
         return json.load(infile)
 
+
 class Command(BaseCommand):
     def handle(self, *args, **options):
         categories = load_from_json('categories')
-
-
 
         ProductCategory.objects.all().delete()
         for category in categories:
@@ -30,7 +30,6 @@ class Command(BaseCommand):
             product['category'] = _category
             new_product = Product(**product)
             new_product.save()
-
 
         super_user = ShopUser.objects.create_superuser('admin', 'admin@geekshop.local', '123', age=30)
         if super_user:

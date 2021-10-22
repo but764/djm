@@ -5,7 +5,7 @@
       "name": "Удобный стул",
       "image": "products_images/product-2.jpg",
       "short_desc": "",
-      "descrition": "",
+      "description": "",
       "price": "2500.00",
       "quantity": 100
   },
@@ -14,7 +14,7 @@
       "name": "Лампа",
       "image": "products_images/product-1.jpg",
       "short_desc": "Ламповый свет",
-      "descrition": "",
+      "description": "",
       "price": "1200.00",
       "quantity": 5
   },
@@ -23,7 +23,7 @@
       "name": "Диван",
       "image": "products_images/product-3-sm.jpg",
       "short_desc": "Уникальный дизайн",
-      "descrition": "",
+      "description": "",
       "price": "15000.00",
       "quantity": 2
   }
