@@ -3,7 +3,6 @@ from django.db import models
 
 
 class ProductCategory(models.Model):
-    objects = None
     name = models.CharField(
         max_length=64,
         verbose_name='имя',
@@ -31,7 +30,6 @@ class ProductCategory(models.Model):
 
 
 class Product(models.Model):
-    objects = None
     category = models.ForeignKey(
         ProductCategory,
         on_delete=models.CASCADE
@@ -54,7 +52,7 @@ class Product(models.Model):
         blank=True,
     )
 
-    descrition = models.TextField(
+    description = models.TextField(
         verbose_name='описание продукта',
         blank=True,
     )

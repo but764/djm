@@ -1,18 +1,21 @@
 from django.shortcuts import render
 
-from basketapp.models import Basket
+from basketap.models import Basket
 from productshop.models import Product
 
 def main(request):
     title = 'Магазин'
-    basket = Basket.objects.filter(user=request.user)
 
-    products = Product.objects.all()[:4]
+    basket = []
+    if request.user.is_authenticated:
+        basket = Basket.objects.filter(user=request.user)
+        products = Product.objects.all()[:4]
 
     context = {
         'title': title,
         'products': products,
-        'basket_count': basket.count()
+        'basket': basket,
+        'basket_count': basket,
     }
     return render(request, 'djshop/index.html', context)
 
