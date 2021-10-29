@@ -9,18 +9,9 @@
 
 {% block content %}
 		<div class="hero-white">
-			<div class="header clearfix">
-				<a href="/" class="logo"></a>
-				<ul class="menu">
-					<li><a href="/">домой</a></li>
-					<li><a href="/products/" class="active">продукты</a></li>
-					<li><a href="/contacts/">контакты</a></li>
-
-				</ul>
-				<a href="#" class="search"></a>
-                <a href="#" class="basket"></a>
-			</div>
-		</div>
+             {% include 'djshop/includes/inc_main_menu.html' %}
+        </div>
+<div class="container row px-5">
 
     <table class="table">
       <thead>

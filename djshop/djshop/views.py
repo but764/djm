@@ -5,11 +5,11 @@ from productshop.models import Product
 
 def main(request):
     title = 'Магазин'
-
     basket = []
     if request.user.is_authenticated:
         basket = Basket.objects.filter(user=request.user)
-        products = Product.objects.all()[:4]
+
+    products = Product.objects.all()[:4]
 
     context = {
         'title': title,

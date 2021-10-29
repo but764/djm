@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'productshop',
     'authapp',
     'basketap',
+    'adminapp',
 ]
 
 AUTH_USER_MODEL = 'authapp.ShopUser'
